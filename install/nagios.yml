@@ -9,7 +9,12 @@
 # we skip switches/oobservers because they normally don't
 # have python installed.
 
-- hosts: all:!switches:!oobservers
+#- hosts: all:!switches:!oobservers
+- hosts: servers
+  remote_user: root
+  tasks: []
+
+- hosts: nagios
   remote_user: root
   tasks: []
 
